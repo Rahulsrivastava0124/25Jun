@@ -1,31 +1,21 @@
 import { useEffect, useRef } from 'react';
 
-const GIFS = [
-  'https://motionsites.ai/assets/hero-space-voyage-preview-eECLH3Yc.gif',
-  'https://motionsites.ai/assets/hero-codenest-preview-Cgppc2qV.gif',
-  'https://motionsites.ai/assets/hero-vex-ventures-preview-BczMFIiw.gif',
-  'https://motionsites.ai/assets/hero-stellar-ai-v2-preview-DjvxjG3C.gif',
-  'https://motionsites.ai/assets/hero-asme-preview-B_nGDnTP.gif',
-  'https://motionsites.ai/assets/hero-transform-data-preview-Cx5OU29N.gif',
-  'https://motionsites.ai/assets/hero-vitara-preview-Cjz2QYyU.gif',
-  'https://motionsites.ai/assets/hero-terra-preview-BFjrCr7T.gif',
-  'https://motionsites.ai/assets/hero-skyelite-preview-DHaZIgUv.gif',
-  'https://motionsites.ai/assets/hero-aethera-preview-DknSlcTa.gif',
-  'https://motionsites.ai/assets/hero-designpro-preview-D8c5_een.gif',
-  'https://motionsites.ai/assets/hero-stellar-ai-preview-D3HL6bw1.gif',
-  'https://motionsites.ai/assets/hero-xportfolio-preview-D4A8maiC.gif',
-  'https://motionsites.ai/assets/hero-orbit-web3-preview-BXt4OttD.gif',
-  'https://motionsites.ai/assets/hero-nexora-preview-cx5HmUgo.gif',
-  'https://motionsites.ai/assets/hero-evr-ventures-preview-DZxeVFEX.gif',
-  'https://motionsites.ai/assets/hero-planet-orbit-preview-DWAP8Z1P.gif',
-  'https://motionsites.ai/assets/hero-new-era-preview-CocuDUm9.gif',
-  'https://motionsites.ai/assets/hero-wealth-preview-B70idl_u.gif',
-  'https://motionsites.ai/assets/hero-luminex-preview-CxOP7ce6.gif',
-  'https://motionsites.ai/assets/hero-celestia-preview-0yO3jXO8.gif',
-];
+import g1  from '../../assets/gallery/Gallery (1).webp';
+import g2  from '../../assets/gallery/Gallery (2).webp';
+import g3  from '../../assets/gallery/Gallery (3).webp';
+import g4  from '../../assets/gallery/Gallery (4).webp';
+import g5  from '../../assets/gallery/Gallery (5).webp';
+import g6  from '../../assets/gallery/Gallery (6).webp';
+import g7  from '../../assets/gallery/Gallery (7).webp';
+import g8  from '../../assets/gallery/Gallery (8).webp';
+import g9  from '../../assets/gallery/Gallery (9).webp';
+import g10 from '../../assets/gallery/Gallery (10).webp';
+import g11 from '../../assets/gallery/Gallery (11).webp';
+import g12 from '../../assets/gallery/Gallery (12).webp';
+import gMain from '../../assets/gallery/Gallery.webp';
 
-const ROW1 = GIFS.slice(0, 11);
-const ROW2 = GIFS.slice(11);
+const ROW1 = [g1, g2, g3, g4, g5, g6, gMain];
+const ROW2 = [g7, g8, g9, g10, g11, g12, g1];
 
 const TRIPLED_ROW1 = [...ROW1, ...ROW1, ...ROW1];
 const TRIPLED_ROW2 = [...ROW2, ...ROW2, ...ROW2];
@@ -43,20 +33,30 @@ function ImageRow({ images, direction }) {
         }}
       >
         {images.map((src, i) => (
-          <img
+          <div
             key={i}
-            src={src}
-            loading="lazy"
-            alt=""
             style={{
               width: '420px',
               height: '270px',
-              objectFit: 'cover',
               borderRadius: '1rem',
               flexShrink: 0,
-              display: 'block',
+              overflow: 'hidden',
+              background: '#111',
             }}
-          />
+          >
+            <img
+              src={src}
+              loading="lazy"
+              alt=""
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                objectPosition: 'center',
+                display: 'block',
+              }}
+            />
+          </div>
         ))}
       </div>
     </div>
@@ -102,7 +102,7 @@ export default function ImageScroll() {
     <section
       ref={sectionRef}
       style={{
-        background: '#0C0C0C',
+        background: '#FFFFFF',
         paddingTop: 'clamp(6rem, 10vw, 10rem)',
         paddingBottom: '2.5rem',
         overflow: 'hidden',
