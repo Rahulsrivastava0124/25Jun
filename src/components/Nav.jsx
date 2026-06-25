@@ -28,9 +28,18 @@ export default function Nav() {
     <nav
       ref={navRef}
       style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 7000,
+        padding: '1.2rem 3rem',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
         backdropFilter: 'blur(16px)',
         WebkitBackdropFilter: 'blur(16px)',
-        background: 'rgba(250,250,248,0.82)',
+        background: 'rgba(250,250,248,0.88)',
         borderBottom: '1px solid rgba(184,150,90,0.12)',
       }}
     >
