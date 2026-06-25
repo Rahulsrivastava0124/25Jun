@@ -80,13 +80,13 @@ export default function CinematicHero() {
         .fromTo(
           cloudLRef.current,
           { x: 0 },
-          { x: -250, y: -60, ease: "none" },
+          { x: -400, y: -40, ease: "none" },
           0,
         )
         .fromTo(
           cloudRRef.current,
           { x: 0 },
-          { x: 250, y: -60, ease: "none" },
+          { x: 400, y: -40, ease: "none" },
           0,
         )
         .fromTo(
@@ -256,9 +256,9 @@ export default function CinematicHero() {
           alt=""
           style={{
             position: "absolute",
-            left: "-8%",
-            bottom: "22%",
-            width: "55%",
+            left: "-4%",
+            bottom: "26%",
+            width: "32%",
             zIndex: 10,
             filter: "blur(0.6px)",
             willChange: "transform, opacity",
@@ -270,9 +270,9 @@ export default function CinematicHero() {
           alt=""
           style={{
             position: "absolute",
-            right: "-8%",
-            bottom: "22%",
-            width: "55%",
+            right: "-4%",
+            bottom: "26%",
+            width: "32%",
             zIndex: 10,
             filter: "blur(0.6px)",
             willChange: "transform, opacity",
