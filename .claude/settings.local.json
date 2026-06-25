@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Skill(gsd:new-project)",
+      "Bash(npm install *)",
+      "Bash(npx tailwindcss *)",
+      "Bash(mkdir -p '/Users/rahulkumarsrivastava/Documents/Office/LP/Claude motion website /25Jun/src/components/sections' '/Users/rahulkumarsrivastava/Documents/Office/LP/Claude motion website /25Jun/src/components/ui' '/Users/rahulkumarsrivastava/Documents/Office/LP/Claude motion website /25Jun/src/hooks' '/Users/rahulkumarsrivastava/Documents/Office/LP/Claude motion website /25Jun/src/lib')"
+    ],
+    "additionalDirectories": [
+      "/Users/rahulkumarsrivastava/Documents/Office/LP/Claude motion website /25Jun/src/components"
+    ]
+  }
+}
